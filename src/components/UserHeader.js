@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchUser } from "../reducers";
+import { fetchUser } from "../actions";
 
 export class UserHeader extends Component {
 	componentDidMount = () => {
-		this.props.fetchUser();
+		this.props.fetchUser(this.props.user);
 	};
 
 	render() {
